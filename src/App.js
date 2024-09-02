@@ -1,24 +1,25 @@
-import logo from './logo.svg';
+import { Routes,Route} from 'react-router-dom';
 import './App.css';
+import Main from './Pages/Main';
+import Iphone12 from './Pages/Iphone12'
+import Iphone13 from './Pages/Iphone13';
+import Iphone14 from './Pages/Iphone14';
+import Iphone15 from './Pages/Iphone15';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+   <section >
+    <Routes>
+      <Route path="/" element={<Main />} />
+      <Route path="/Iphone12" element={<Iphone12 />} />
+      <Route path="/Iphone13" element={<Iphone13 />} />
+      <Route path="/Iphone14" element={<Iphone14 />} />
+      <Route path="/Iphone15" element={<Iphone15 />} />
+    </Routes>
+   </section>
+    
   );
 }
 
